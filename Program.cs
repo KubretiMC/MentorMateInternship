@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace MentorMateTask
 {
@@ -29,7 +29,7 @@ namespace MentorMateTask
         {
             for (int i = 0; i <= row; i++)
             {
-                for (int j = 0; j < column; j++)
+                for (int j = 0; j <= column; j++)
                 {
                     arr[i, j] = "- ";
                 }
@@ -42,7 +42,6 @@ namespace MentorMateTask
             {
                 if (number == row)
                 {
-
                     for (int k = j; k < j + row; k++)
                     {
                         arr[0, k] = "* ";
@@ -53,13 +52,11 @@ namespace MentorMateTask
                             arr[i, k + i] = "* ";
                         }
                     }
-
-                    j += row - 1;
+                    j += row-1;
                     number = 0;
                 }
                 else
                 {
-                    arr[0, j] = "- ";
                     number++;
                 }
             }
@@ -69,7 +66,7 @@ namespace MentorMateTask
             for (int i = 0; i <= row; i++)
             {
                 int m = 0;
-                for (int k = column/2; k < column; k++)
+                for (int k = column/2+1; k <= column; k++)
                 {
                     arr[i, k] = arr[i, m];
                     m++;
